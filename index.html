@@ -3,43 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSheet Generator Tool</title>
+    <title>EduSheet Chooser | Mama Said This</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; text-align: center; background: #f9f9f9; }
-        h1 { color: #333; }
-        p { line-height: 1.5; margin-bottom: 20px; }
-        .button { display: inline-block; background: #4CAF50; color: white; padding: 12px 24px; margin: 10px; text-decoration: none; border-radius: 5px; font-size: 16px; transition: background 0.3s; }
-        .button:hover { background: #45a049; }
-        .back-btn { background: #008CBA; }
-        .back-btn:hover { background: #007B9A; }
-        form { max-width: 400px; margin: 20px auto; text-align: left; }
-        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-        input[type="submit"] { background: #4CAF50; color: white; cursor: pointer; }
-        input[type="submit"]:hover { background: #45a049; }
+        :root { --primary: #e85d75; --light: #f8fafc; --dark: #1e293b; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); background: var(--light); padding: 2rem; line-height: 1.6; }
+        @media (max-width: 768px) { body { padding: 1rem; } }
+        h1 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; color: var(--primary); text-align: center; margin-bottom: 1rem; }
+        p { text-align: center; max-width: 600px; margin: 0 auto 2rem; color: #64748b; }
+        .chooser-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 600px; margin: 2rem auto; }
+        @media (min-width: 769px) { .chooser-grid { grid-template-columns: 1fr 1fr; } }
+        .gen-card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s; }
+        .gen-card:hover { transform: translateY(-5px); }
+        .gen-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--dark); }
+        .btn { display: inline-block; padding: 0.8rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; transition: background 0.3s; }
+        .btn:hover { background: #d14361; }
+        .back-btn { display: block; margin: 2rem auto 1rem; padding: 0.6rem 1.2rem; background: #6366f1; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9rem; text-align: center; max-width: 200px; }
+        .back-btn:hover { background: #4f46e5; }
+        hr { border: none; height: 1px; background: #e2e8f0; margin: 2rem auto; max-width: 300px; }
     </style>
 </head>
 <body>
-    <h1>EduSheet Generator Tool</h1>
-    <p>Generate custom educational worksheets instantly – no signups needed! Choose below. If one doesn't load (e.g., due to browser settings), try the other.</p>
+    <a href="https://mamasaid-this.pages.dev/" class="back-btn">← Back to Home</a>
     
-    <a href="https://edusheet-generator-fg91u23.public.builtwithrocket.new/" class="button" target="_blank">Try Generator 1 (Rocket-Built App)</a>
-    <br>
-    <a href="https://www.rocket.new/68e5f63540a8710014d43772#preview" class="button" target="_blank">Try Generator 2 (Platform Preview)</a>
+    <h1>EduSheet Magic</h1>
+    <p>Pick your poison—custom worksheets, no fuss. Built for busy homeschool moms like me. If one glitches (browsers, amirite?), swap to the other.</p>
     
-    <br><br>
-    <button class="button back-btn" onclick="history.back()">← Back to Home</button>
+    <div class="chooser-grid">
+        <div class="gen-card">
+            <h3>📝 K-6 Worksheet Generator</h3>
+            <p>Math drills or reading quests. Grade-tuned, PDF-ready.</p>
+            <a href="https://k6-worksheet.pages.dev/" class="btn" target="_blank">Launch It</a>
+        </div>
+        
+        <div class="gen-card">
+            <h3>📚 EduSheet Generator</h3>
+            <p>Full lesson templates—vocab, notes, whatever. Super flexible.</p>
+            <a href="https://edusheet.pages.dev/" class="btn" target="_blank">Dive In</a>
+        </div>
+    </div>
     
-    <hr style="margin: 40px 0;">
-    <h2>Issues or Requests?</h2>
-    <p>Page not working? Have a feature request? Let me know!</p>
-    <form action="https://submit-form.com/form_v1_Dt1CuHXQv48hmdfaZTOMB2as" method="POST">
-        <input type="text" name="name" placeholder="Your Name (optional)" required>
-        <input type="email" name="email" placeholder="Your Email (optional)">
-        <textarea name="message" placeholder="Describe the issue or request (e.g., 'Generator 1 won't load on mobile')" rows="4" required></textarea>
-        <input type="hidden" name="_subject" value="EduSheet Tool Feedback">
-        <input type="submit" value="Send Feedback">
-    </form>
-    
-    <p style="font-size: 12px; color: #666; margin-top: 20px;">To add more generators later: Edit the &lt;a href=&quot;...&quot;&gt; lines above.</p>
+    <hr>
+    <p style="text-align: center; font-size: 0.9rem; color: #94a3b8;">Glitch? Feature wish? <a href="mailto:heather@herbalhomeschool.work.gd" style="color: var(--primary);">Email me</a>. Easy peasy.</p>
 </body>
 </html>
